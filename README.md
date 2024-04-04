@@ -2,15 +2,42 @@
 
 ![Portada](https://avatars.githubusercontent.com/u/149858423?v=4)
 
+---
 ## Índice
+1. [Acerca de](#Acerca-de)
+2. [Versión](#Versión)
+3. [Instrucciones de uso](#Instrucciones-de-uso)
+4. [Código](#Código)
+5. [Notas](#Notas)
+6. [Cambios en esta versión](#Cambios-en-esta-versión)
 
-1. [Instrucciones de uso](#instrucciones-de-uso)
-2. [Código](#código)
-3. [Notas](#notas)
+---
+## Acerca de
 
+Este es un buscaminas básico implementado en Java.
+La aplicación genera un tablero de buscaminas con dimensiones personalizables y 
+una cantidad definida de bombas. Los jugadores pueden explorar el tablero y descubrir 
+las ubicaciones de las bombas evitando activarlas.
+---
+
+## Versión
+
+La versión actual de la aplicación es` v0.1.0.`
+
+
+### Cambios en esta versión
+
+- Implementado el generador de tableros aleatorios.
+- Añadida la capacidad de ingresar el número de columnas, filas y bombas.
+- Mostrar el tablero numerado con los índices de fila y columna.
+- Mostrar el tablero inicial con bombas ocultas representadas por el caracter `+`.
+
+---
 ## Instrucciones de uso
 
-Este es un simple juego de buscaminas implementado en Java. El programa solicita al usuario las dimensiones del tablero y la cantidad de bombas que se desean colocar, luego muestra el tablero inicial con las bombas ocultas.
+Este es un simple juego de buscaminas implementado en Java. El programa solicita al usuario las 
+dimensiones del tablero y la cantidad de bombas que se desean colocar, luego muestra el tablero inicial 
+con las bombas ocultas.
 
 1. Ejecuta el programa `Main.java`.
 2. Sigue las instrucciones en la consola para ingresar el número de columnas, filas y la cantidad de bombas.
