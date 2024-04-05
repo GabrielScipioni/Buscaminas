@@ -50,7 +50,8 @@ con las bombas ocultas.
 <div style="border: 2px solid black; width: 300px; height: 300px; overflow: hidden; margin: 0 auto;">
     <img src="img/Captura de pantalla 2024-04-05 102456.png" style="display: block; margin: 0 auto;">
 </div>
-## Código
+
+##  Código
 
 ```java
 public static void main(String[] args) {
