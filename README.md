@@ -6,10 +6,10 @@
 ## Índice
 1. [Acerca de](#Acerca-de)
 2. [Versión](#Versión)
-3. [Instrucciones de uso](#Instrucciones-de-uso)
-4. [Código](#Código)
-5. [Notas](#Notas)
-6. [Cambios en esta versión](#Cambios-en-esta-versión)
+3. [Cambios en esta versión](#Cambios-en-esta-versión)
+4. [Instrucciones de uso](#Instrucciones-de-uso)
+5. [Código](#Código)
+6. [Notas](#Notas)
 
 ---
 ## Acerca de
@@ -17,20 +17,24 @@
 Este es un buscaminas básico implementado en Java.
 La aplicación genera un tablero de buscaminas con dimensiones personalizables y 
 una cantidad definida de bombas. Los jugadores pueden explorar el tablero y descubrir 
-las ubicaciones de las bombas evitando activarlas.
+las ubicaciones de las bombas evitando activarlas. 
+
+
+
 ---
 
 ## Versión
 
-La versión actual de la aplicación es` v0.1.0.`
+La versión actual de la aplicación es` v0.2.0.`
 
 
 ### Cambios en esta versión
 
-- Implementado el generador de tableros aleatorios.
-- Añadida la capacidad de ingresar el número de columnas, filas y bombas.
-- Mostrar el tablero numerado con los índices de fila y columna.
-- Mostrar el tablero inicial con bombas ocultas representadas por el caracter `+`.
+- Refactorización del código para separar la lógica del tablero en una clase independiente llamada `Tablero`.
+- Implementación de la clase `Tablero` para generar y administrar el tablero del buscaminas, mejorando la organización y mantenibilidad del código.
+- Actualización de la representación de las casillas vacías en el tablero como `'-'`.
+- Mejora en la identificación de las casillas contiguas a las bombas, mostrando el número de bombas adyacentes en las casillas vacías.
+- Corrección de errores menores y optimización del rendimiento del programa.
 
 ---
 ## Instrucciones de uso
@@ -42,7 +46,10 @@ con las bombas ocultas.
 1. Ejecuta el programa `Main.java`.
 2. Sigue las instrucciones en la consola para ingresar el número de columnas, filas y la cantidad de bombas.
 3. Observa el tablero generado con las bombas ocultas representadas por el caracter `+` y los espacios vacíos con `-`.
-
+4. En el tablero, las casillas vacías que están adyacentes a una o más bombas mostrarán un número que indica la cantidad de bombas que las rodean.
+<div style="border: 2px solid black; width: 300px; height: 300px; overflow: hidden; margin: 0 auto;">
+    <img src="img/Captura de pantalla 2024-04-05 102456.png" style="display: block; margin: 0 auto;">
+</div>
 ## Código
 
 ```java
@@ -115,8 +122,18 @@ public class Main {
     }
 }
 ```
+Dada la mejora en la implementación y la inclusión de la clase `Tablero` para una mejor organización y legibilidad del código, podrías dejar una nota que refleje estos cambios y resalte las mejoras en la funcionalidad del programa. Aquí tienes una sugerencia:
+## Nota
 
-## Notas
+- El programa ha sido actualizado para incluir una clase `Tablero`, lo que mejora la organización y estructura del código. Ahora, además de generar un tablero con las bombas ocultas representadas por el caracter `+` y los espacios vacíos con `-`, muestra números en las casillas vacías para indicar la cantidad de bombas adyacentes. Esta actualización no solo optimiza la legibilidad y mantenibilidad del código, sino que también mejora la experiencia del usuario al proporcionar información más detallada sobre el entorno del juego.
 
-- El programa genera un tablero con las bombas ocultas representadas por el caracter `+` y los espacios vacíos con `-`.
-- Este código es una implementación básica de un buscaminas y puede ser extendido con funcionalidades adicionales como la detección de casillas adyacentes a las bombas y la interacción del usuario para descubrir las casillas.
+- Próximamente se planea añadir funcionalidades interactivas al juego para hacerlo más similar al juego original. Se espera implementar un buscaminas funcional que permita a los usuarios jugar en la consola, con la posibilidad de realizar turnos para ingresar coordenadas de fila y columna. Esta actualización transformará el juego en una experiencia interactiva, ofreciendo una experiencia más inmersiva y entretenida para los jugadores.
+
+- A largo plazo, el objetivo último de este proyecto es convertirse en un juego interactivo de consola. Sin embargo, mi visión a largo plazo incluye la posibilidad de desarrollar una interfaz gráfica que proporcione una experiencia aún más satisfactoria para el usuario.
+
+
+
+
+
+
+

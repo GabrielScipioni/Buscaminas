@@ -1,53 +1,28 @@
 package org.example;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //inicializar scanner y  random
-        Random ran=new Random();
-        Scanner scan =new Scanner(System.in);
-        //ingresar un numero x
-        System.out.println("indique el numero de columnas");
-        int x=scan.nextInt();
-        //ingresar un numero y
-        System.out.println("indique el numero de filas");
-        int y=scan.nextInt();
+        // Inicializar Scanner
+        Scanner scan = new Scanner(System.in);
 
-        //ingresar cantidad de bombas
-        System.out.println("indique el numero de bombas");
-        int bombas= scan.nextInt();
+        // Ingresar el número de columnas
+        System.out.println("Indique el número de columnas");
+        int x = scan.nextInt();
 
-        //crear una matriz en base a (x;y)
-        char[][] tablero = new char[y][x];
+        // Ingresar el número de filas
+        System.out.println("Indique el número de filas");
+        int y = scan.nextInt();
 
-        //matriz dibujada con guiones
-        for (int i = 0; i < y; i++) {
-            for (int j = 0; j < x; j++) {
-                tablero[i][j]='-';
-            }
-        }
-        //dibujar bombas
-        for (int k = 0; k < bombas; k++) {
-            int fil=ran.nextInt(y);
-            int col=ran.nextInt(x);
-            tablero[fil][col]='+';
-        }
-        //mostrar el numerado
-        System.out.print("  ");
-        for (int i = 0; i < x; i++) {
-            System.out.print(" "+(i+1));
-        }
+        // Ingresar la cantidad de bombas
+        System.out.println("Indique el número de bombas");
+        int bombas = scan.nextInt();
 
-        //mostrar matriz
-        System.out.println();
-        for (int i = 0; i < y; i++) {
-            System.out.print((i + 1) + " ");
-            for (int j = 0; j < x; j++) {
-                System.out.print(" " + tablero[i][j]);
-            }
-            System.out.println();
-        }
+        // Crear un objeto Tablero
+        Tablero tablero = new Tablero(x, y, bombas);
+
+        // Mostrar el tablero
+        tablero.mostrarTablero();
     }
 }
