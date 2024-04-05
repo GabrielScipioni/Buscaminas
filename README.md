@@ -53,74 +53,28 @@ con las bombas ocultas.
 ## Código
 
 ```java
-package org.example;
-
-import java.util.Random;
-import java.util.Scanner;
-
-public class Main {
-    // Aquí va el código...
-}
-
-
-```java
-package org.example;
-
-import java.util.Random;
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        // Inicializar scanner y random
-        Random ran = new Random();
+public static void main(String[] args) {
+        // Inicializar Scanner
         Scanner scan = new Scanner(System.in);
 
         // Ingresar el número de columnas
-        System.out.println("Indique el número de columnas:");
+        System.out.println("Indique el número de columnas");
         int x = scan.nextInt();
 
         // Ingresar el número de filas
-        System.out.println("Indique el número de filas:");
+        System.out.println("Indique el número de filas");
         int y = scan.nextInt();
 
         // Ingresar la cantidad de bombas
-        System.out.println("Indique el número de bombas:");
+        System.out.println("Indique el número de bombas");
         int bombas = scan.nextInt();
 
-        // Crear una matriz en base a (x;y)
-        char[][] tablero = new char[y][x];
+        // Crear un objeto Tablero
+        Tablero tablero = new Tablero(x, y, bombas);
 
-        // Matriz dibujada con guiones
-        for (int i = 0; i < y; i++) {
-            for (int j = 0; j < x; j++) {
-                tablero[i][j] = '-';
-            }
-        }
-
-        // Dibujar bombas
-        for (int k = 0; k < bombas; k++) {
-            int fil = ran.nextInt(y);
-            int col = ran.nextInt(x);
-            tablero[fil][col] = '+';
-        }
-
-        // Mostrar el numerado
-        System.out.print("  ");
-        for (int i = 0; i < x; i++) {
-            System.out.print(" " + (i + 1));
-        }
-
-        // Mostrar matriz
-        System.out.println();
-        for (int i = 0; i < y; i++) {
-            System.out.print((i + 1) + " ");
-            for (int j = 0; j < x; j++) {
-                System.out.print(" " + tablero[i][j]);
-            }
-            System.out.println();
-        }
+        // Mostrar el tablero
+        tablero.mostrarTablero();
     }
-}
 ```
 Dada la mejora en la implementación y la inclusión de la clase `Tablero` para una mejor organización y legibilidad del código, podrías dejar una nota que refleje estos cambios y resalte las mejoras en la funcionalidad del programa. Aquí tienes una sugerencia:
 ## Nota
